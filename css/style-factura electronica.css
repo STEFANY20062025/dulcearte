@@ -72,9 +72,9 @@ header {
     gap: 30px;
     margin-bottom: 5px;
 }
+
 .sidebar::before {
-    content: "";
-    display: block;
+    display: flex;
     width: 100%;
     height: 200px; /* altura de la onda */
     background: linear-gradient(135deg, #eda557cb, #eda557cb); /* degradado más sólido */
@@ -92,18 +92,6 @@ header {
     height: 115px;
     object-fit: contain;
     border-radius: 50%;
-}
-
-
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 9998;
 }
 
 main{
