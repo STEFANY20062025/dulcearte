@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Venecia | Venecia Delipostres</title>
-    <link rel="icon" href="/image/logo-final.png">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="css/carrusel.css">
-    <link rel="stylesheet" href="css/carrito.css">
-    <link rel="stylesheet" href="/css/form.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>DulceArte — Productos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/image/logo-final.png">
+  <link rel="stylesheet" href="/css/carrito.css">
+  <link rel="stylesheet" href="/css/style-producto.css">
+  <link rel="stylesheet" href="/css/form.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <script src="/js/ver.js"></script>
 </head>
 <body>
+
     <header>
         <button class="menu-btn" onclick="abrirMenu()"><img src="/image/menu-svgrepo-com.svg" alt="menu" class="menu-icon"></button>
         <div class="logo">DulceArte 
@@ -25,7 +27,7 @@
 
 
 
-<div class="carrito-sidebar" id="carritoSidebar">
+    <div class="carrito-sidebar" id="carritoSidebar">
 <button class="cerrar-carrito" onclick="cerrarCarrito()">
     <img src="/image/close-ellipse-svgrepo-com.svg" alt="Cerrar">
 </button>
@@ -42,8 +44,6 @@
   </div>
 </div>
 
-
-<div class="overlay" id="carritoOverlay" onclick="cerrarCarrito()"></div>
 
 <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
@@ -62,12 +62,13 @@
     <br>
     <h2>Encuéntranos en:</h2>
     <div class="social-icons-sidebar">
-        <a href="#"><img src="image/facebook-svgrepo-com.svg" alt="Facebook"></a>
-        <a href="#"><img src="image/instagram-svgrepo-com.svg" alt="Instagram"></a>
-        <a href="#"><img src="image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
+        <a href="#"><img src="/image/facebook-svgrepo-com.svg" alt="Facebook"></a>
+        <a href="#"><img src="/image/instagram-svgrepo-com.svg" alt="Instagram"></a>
+        <a href="#"><img src="/image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
     </div>
 </div>
 <div class="overlay" id="overlay" onclick="cerrarMenu()"></div>
+
 
     <div class="cfd" id="aparecerr">
         <section class="aparecer">
@@ -129,80 +130,71 @@
         </div>
     </div>
 
-<section class="hero" id="inicio">
-    <div class="carousel">
-    <div class="carousel-inner">
-            <video autoplay muted loop playsinline>
-        <source src="/image/video.mp4" type="video/mp4">
-        Tu navegador no soporta videos HTML5.
-      </video>
-      <img src="/image/uchuva.jpg" alt="Foto 1">
-      <img src="/image/creme.jpg" alt="Foto 2">
-      <img src="/image/uchuva.jpg" alt="Foto 3">
-    </div>
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-    </div>
-    <div class="hero-text">
-        <h1>DulceArte</h1>
-        <p>Elige tú sabor preferido</p>
-    </div>
-</section>
 
 
-<section class="productos">
-    <h2>Productos Destacados</h2>
-    <div class="producto-lista">
-        <a href="#postre-pastora" class="producto">
-            <img src="image/uchuva.jpg" alt="Postre pastora">
-            <div>Postre pastora<br><strong>$31.900</strong></div>
-        </a>
-        <a href="#tarta-queso" class="producto">
-            <img src="image/creme.jpg" alt="Tarta de Queso">
-            <div>Tarta de Queso<br><strong>$38.800</strong></div>
-        </a>
-        <a href="#dibs-frambuesa" class="producto">
-            <img src="image/uchuva.jpg" alt="Dibs frambuesa">
-            <div>Dibs frambuesa<br><strong>$5.000</strong></div>
-        </a>
-        <a href="#helado-uchuva" class="producto">
-            <img src="image/creme.jpg" alt="Helado uchuva">
-            <div>Helado uchuva<br><strong>$5.000</strong></div>
-        </a>
-        <a href="#pan-chocolate" class="producto">
-            <img src="image/uchuva.jpg" alt="Pan de chocolate">
-            <div>Pan de chocolate<br><strong>$11.500</strong></div>
-        </a>
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="landing-wrap">
+    
+    <!-- Sidebar de categorías -->
+    <aside class="left-col">
+      <div class="categories">
+        <h3>Productos</h3>
+        <ul class="cat-list">
+          <li class="cat-item" data-cat="Postres">
+            <img class="icon-l" src="/image/dessert-svgrepo-com.svg" alt="">Postres
+          </li>
+          <ul class="cat-sub">
+            <li>Pequeño</li>
+            <li>Familiar</li>
+          </ul>
+
+          <li class="cat-item" data-cat="Bebidas">
+            <img class="icon-l" src="/image/bottle-svgrepo-com.svg" alt="">Bebidas
+          </li>
+          <li class="cat-item" data-cat="Pasteleria">
+            <img class="icon-l" src="/image/cake-svgrepo-com.svg" alt="">Pastelería
+          </li>
+          <li class="cat-item" data-cat="Galleteria">
+            <img class="icon-l" src="/image/cookie-svgrepo-com.svg" alt="">Galletería
+          </li>
+          <li class="cat-item" data-cat="Heladeria">
+            <img class="icon-l" src="/image/ice-cream-svgrepo-com.svg" alt="">Heladería
+          </li>
+          <li class="cat-item" data-cat="Celebracion">
+            <img class="icon-l" src="/image/party-svgrepo-com.svg" alt="">Celebración
+          </li>
+          <li class="cat-item" data-cat="Hornea2">
+            <img class="icon-l" src="/image/oven.svg" alt="">Hornea2
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+
+ <!-- Sección de productos -->
+<section class="right-col">
+  <div class="panel-title">
+    <h2>Productos</h2>
+    <div class="searchbox">
+      <input id="searchInput" type="text" placeholder="Buscar producto...">
+      <button id="searchBtn">Buscar</button>
     </div>
-</section>
+  </div>
 
-
-<section class="productos">
-  <h2>Nuestros Productos</h2>
-  <div class="producto-lista">
-    <a href="#postres" class="lista-link">
-      <div class="lista"><img src="/image/dessert-svgrepo-com.svg" alt="Postres">Postres</div>
-    </a>
-    <a href="#bebidas" class="lista-link">
-      <div class="lista"><img src="/image/dessert-svgrepo-com.svg" alt="Bebidas">Bebidas</div>
-    </a>
-    <a href="#pasteleria" class="lista-link">
-      <div class="lista"><img src="/image/dessert-svgrepo-com.svg" alt="Pastelería">Pastelería</div>
-    </a>
-    <a href="#galletaria" class="lista-link">
-      <div class="lista"><img src="/image/dessert-svgrepo-com.svg" alt="Galletería">Galletería</div>
-    </a>
-    <a href="#heladeria" class="lista-link">
-      <div class="lista"><img src="/image/dessert-svgrepo-com.svg" alt="Heladería">Heladería</div>
-    </a>
-    <a href="#celebracion" class="lista-link">
-      <div class="lista"><img src="/image/dessert-svgrepo-com.svg" alt="Celebración">Celebración</div>
-    </a>
-    <a href="#hornea2" class="lista-link">
-      <div class="lista"><img src="/image/oven.svg" alt="Hornea2">Hornea2</div>
-    </a>
+  <!-- Contenedor donde se renderizan los productos -->
+  <div class="productos-grid">
+    {% for producto in productos %}
+      <div class="producto" onclick="window.location.href='/producto/{{ producto.id }}'">
+        <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}">
+        <h3>{{ producto.nombre }}</h3>
+        <p class="precio">${{ producto.precio }}</p>
+        <button class="btn-agregar">AGREGAR 🛒</button>
+      </div>
+    {% endfor %}
   </div>
 </section>
+
+  </main>
 
 
 <footer class="footer">
@@ -233,17 +225,18 @@
     <div class="footer-section">
         <h3>Encuéntranos en:</h3>
         <div class="social-icons">
-            <a href="#"><img src="image/facebook-svgrepo-com.svg" alt="Facebook"></a>
-            <a href="#"><img src="image/instagram-svgrepo-com.svg" alt="Instagram"></a>
-            <a href="#"><img src="image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
+            <a href="#"><img src="/image/facebook-svgrepo-com.svg" alt="Facebook"></a>
+            <a href="#"><img src="/image/instagram-svgrepo-com.svg" alt="Instagram"></a>
+            <a href="#"><img src="/image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
         </div>
     </div>
     <script src="js/carrousel.js"></script>
     <script src="js/carrito.js"></script>
+    <script src="/js/form.js"></script>
 </footer>
 
-    <script src="/js/ver.js"></script>
-    <script src="/js/nav.js"></script>
-    <script src="/js/form.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/carrito.js"></script>
+
 </body>
 </html>

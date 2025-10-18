@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Venecia | Venecia Delipostres</title>
-    <link rel="icon" href="/image/logo-final.png">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="css/carrusel.css">
-    <link rel="stylesheet" href="css/carrito.css">
-    <link rel="stylesheet" href="/css/form.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>DulceArte — Productos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/image/logo-final.png">
+  <link rel="stylesheet" href="/css/carrito.css">
+  <link rel="stylesheet" href="/css/style-personalizar.css">
+  <link rel="stylesheet" href="/css/form.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <script src="/js/ver.js"></script>
 </head>
 <body>
+
     <header>
         <button class="menu-btn" onclick="abrirMenu()"><img src="/image/menu-svgrepo-com.svg" alt="menu" class="menu-icon"></button>
         <div class="logo">DulceArte 
@@ -25,7 +27,7 @@
 
 
 
-<div class="carrito-sidebar" id="carritoSidebar">
+    <div class="carrito-sidebar" id="carritoSidebar">
 <button class="cerrar-carrito" onclick="cerrarCarrito()">
     <img src="/image/close-ellipse-svgrepo-com.svg" alt="Cerrar">
 </button>
@@ -42,8 +44,6 @@
   </div>
 </div>
 
-
-<div class="overlay" id="carritoOverlay" onclick="cerrarCarrito()"></div>
 
 <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
@@ -62,12 +62,13 @@
     <br>
     <h2>Encuéntranos en:</h2>
     <div class="social-icons-sidebar">
-        <a href="#"><img src="image/facebook-svgrepo-com.svg" alt="Facebook"></a>
-        <a href="#"><img src="image/instagram-svgrepo-com.svg" alt="Instagram"></a>
-        <a href="#"><img src="image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
+        <a href="#"><img src="/image/facebook-svgrepo-com.svg" alt="Facebook"></a>
+        <a href="#"><img src="/image/instagram-svgrepo-com.svg" alt="Instagram"></a>
+        <a href="#"><img src="/image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
     </div>
 </div>
 <div class="overlay" id="overlay" onclick="cerrarMenu()"></div>
+
 
     <div class="cfd" id="aparecerr">
         <section class="aparecer">
@@ -129,80 +130,63 @@
         </div>
     </div>
 
-<section class="hero" id="inicio">
-    <div class="carousel">
-    <div class="carousel-inner">
-            <video autoplay muted loop playsinline>
-        <source src="/image/video.mp4" type="video/mp4">
-        Tu navegador no soporta videos HTML5.
-      </video>
-      <img src="/image/uchuva.jpg" alt="Foto 1">
-      <img src="/image/creme.jpg" alt="Foto 2">
-      <img src="/image/uchuva.jpg" alt="Foto 3">
-    </div>
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-    </div>
-    <div class="hero-text">
-        <h1>DulceArte</h1>
-        <p>Elige tú sabor preferido</p>
-    </div>
-</section>
 
+<section class="personalizar-container">
 
-<section class="productos">
-    <h2>Productos Destacados</h2>
-    <div class="producto-lista">
-        <a href="#postre-pastora" class="producto">
-            <img src="image/uchuva.jpg" alt="Postre pastora">
-            <div>Postre pastora<br><strong>$31.900</strong></div>
-        </a>
-        <a href="#tarta-queso" class="producto">
-            <img src="image/creme.jpg" alt="Tarta de Queso">
-            <div>Tarta de Queso<br><strong>$38.800</strong></div>
-        </a>
-        <a href="#dibs-frambuesa" class="producto">
-            <img src="image/uchuva.jpg" alt="Dibs frambuesa">
-            <div>Dibs frambuesa<br><strong>$5.000</strong></div>
-        </a>
-        <a href="#helado-uchuva" class="producto">
-            <img src="image/creme.jpg" alt="Helado uchuva">
-            <div>Helado uchuva<br><strong>$5.000</strong></div>
-        </a>
-        <a href="#pan-chocolate" class="producto">
-            <img src="image/uchuva.jpg" alt="Pan de chocolate">
-            <div>Pan de chocolate<br><strong>$11.500</strong></div>
-        </a>
+  <!-- Vista del producto -->
+  <div class="vista-producto">
+    <img src="/image/torta-chocolate-chispas.png" alt="Postre de Chocolate" id="postre-base">
+    <div id="decoraciones-contenedor">
+      <!-- Aquí se superpondrían decoraciones (solo visual, sin JS aún) -->
+      <img src="/image/chispa.png" alt="Chispas" class="decoracion-preview">
+      <img src="/image/fresas.png" alt="Fresas" class="decoracion-preview">
     </div>
-</section>
+  </div>
 
+  <!-- Panel de configuración -->
+  <div class="configuracion">
+    <h2>Postre de Chocolate</h2>
+    <p>Delicioso postre artesanal de chocolate con base cremosa y textura suave. Ideal para celebraciones o antojos dulces.</p>
+    <h3>Precio base: $7.500</h3>
 
-<section class="productos">
-  <h2>Nuestros Productos</h2>
-  <div class="producto-lista">
-    <a href="#postres" class="lista-link">
-      <div class="lista"><img src="/image/dessert-svgrepo-com.svg" alt="Postres">Postres</div>
-    </a>
-    <a href="#bebidas" class="lista-link">
-      <div class="lista"><img src="/image/dessert-svgrepo-com.svg" alt="Bebidas">Bebidas</div>
-    </a>
-    <a href="#pasteleria" class="lista-link">
-      <div class="lista"><img src="/image/dessert-svgrepo-com.svg" alt="Pastelería">Pastelería</div>
-    </a>
-    <a href="#galletaria" class="lista-link">
-      <div class="lista"><img src="/image/dessert-svgrepo-com.svg" alt="Galletería">Galletería</div>
-    </a>
-    <a href="#heladeria" class="lista-link">
-      <div class="lista"><img src="/image/dessert-svgrepo-com.svg" alt="Heladería">Heladería</div>
-    </a>
-    <a href="#celebracion" class="lista-link">
-      <div class="lista"><img src="/image/dessert-svgrepo-com.svg" alt="Celebración">Celebración</div>
-    </a>
-    <a href="#hornea2" class="lista-link">
-      <div class="lista"><img src="/image/oven.svg" alt="Hornea2">Hornea2</div>
-    </a>
+    <label for="texto">Texto personalizado:</label>
+    <input type="text" id="texto" placeholder="Ej: Feliz Cumpleaños">
+
+    <h4>Decoraciones disponibles</h4>
+    <div class="decoraciones-lista">
+      <div class="decoracion-item">
+        <img src="/image/chispa.png" alt="Chispas de colores" class="decoracion-opcion">
+        <p>Chispas</p>
+      </div>
+
+      <div class="decoracion-item">
+        <img src="/image/fresas.png" alt="Rodajas de fresa" class="decoracion-opcion">
+        <p>Fresas</p>
+      </div>
+
+      <div class="decoracion-item">
+        <img src="/image/chocolate.png" alt="Trozos de chocolate" class="decoracion-opcion">
+        <p>Trozos de Chocolate</p>
+      </div>
+
+      <div class="decoracion-item">
+        <img src="/image/cereza.png" alt="Cerezas" class="decoracion-opcion">
+        <p>Cerezas</p>
+      </div>
+
+      <div class="decoracion-item">
+        <button class="decoracion-texto">Texto “Te Amo”</button>
+      </div>
+
+      <div class="decoracion-item">
+        <button class="decoracion-texto">Texto “Feliz Cumpleaños”</button>
+      </div>
+    </div>
+
+    <button class="btn-agregar">Agregar al pedido <img src="/image/cart-shopping-fast-svgrepo-com.svg" alt="" class="icon-contenedor"></button>
   </div>
 </section>
+
 
 
 <footer class="footer">
@@ -233,17 +217,38 @@
     <div class="footer-section">
         <h3>Encuéntranos en:</h3>
         <div class="social-icons">
-            <a href="#"><img src="image/facebook-svgrepo-com.svg" alt="Facebook"></a>
-            <a href="#"><img src="image/instagram-svgrepo-com.svg" alt="Instagram"></a>
-            <a href="#"><img src="image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
+            <a href="#"><img src="/image/facebook-svgrepo-com.svg" alt="Facebook"></a>
+            <a href="#"><img src="/image/instagram-svgrepo-com.svg" alt="Instagram"></a>
+            <a href="#"><img src="/image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
         </div>
     </div>
     <script src="js/carrousel.js"></script>
-    <script src="js/carrito.js"></script>
 </footer>
+<script src="/js/form.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/carrito.js"></script>
 
-    <script src="/js/ver.js"></script>
-    <script src="/js/nav.js"></script>
-    <script src="/js/form.js"></script>
+<script>
+const vista = document.querySelector('.vista-producto');
+const imagen = document.getElementById('postre-base');
+
+vista.addEventListener('mousemove', (e) => {
+  const rect = vista.getBoundingClientRect();
+  const x = ((e.clientX - rect.left) / rect.width) * 100;
+  const y = ((e.clientY - rect.top) / rect.height) * 100;
+  imagen.style.transformOrigin = `${x}% ${y}%`;
+});
+
+vista.addEventListener('mouseenter', () => {
+  vista.classList.add('zoom-activo');
+});
+
+vista.addEventListener('mouseleave', () => {
+  vista.classList.remove('zoom-activo');
+  imagen.style.transformOrigin = 'center center';
+});
+</script>
+
+
 </body>
 </html>

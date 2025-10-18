@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+h2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+.inic a {
+  position: relative;
+  z-index: 1;
+}
+.olvido-contra {
+  display: block;
+  margin-top: 10px;
+  color: white; 
+  font-size: 14px;
+  text-decoration: underline;
+  font-family: "Oswald", sans-serif;
+  text-align: center; 
+}
+
+.olvido-contra:hover {
+  color: #ffcccc; 
+}
+
+.sesion {
+
+    background-color: rgb(138, 128, 128); 
+    text-transform: uppercase;
+    font-family: "oswald", sans-serif;
+    font-size: 20px;
+    height: 500px;
+    width: 800px;
+    border-radius: 20px;
+    margin: 50px 50px;
+    text-align: center;
+    z-index: 200;
+  }
+  
+.sesion h2 {
+    font-weight: 300;
+    padding-top: 60px;
+}
+  
+.sesion input {
+    font-family: "oswald", sans-serif;
+    font-size: 20px;
+    border: none;
+    background: none;
+    border-bottom: 2px black solid;
+    width: 350px;
+}
+  
+.sesion button {
+    background: none;
+    border: 1px black solid;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-top: -20px;
+}
+  
+.blanco {
+    background-color: #f0b674; 
+    border-radius: 20px 300px 300px 20px;
+    height: 500px;
+    width: 500px;
+    box-shadow: 10px 10px 10px black;
+    color: white;
+    z-index: 200;
+}
+  
+.popi {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    z-index: 100;
+    visibility: hidden;
+}
+  
+.popi.active {
+    visibility: visible;
+}
+
+/* 🔥 NUEVO BOTÓN CERRAR MEJORADO */
+
+
+.btncerrar {
+  position: absolute;
+  top: 15px;       /* ajusta según el espacio que necesites */
+  left: 15px;
+  font-size: 25px;
+  color: black;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10; /* para asegurarte que quede por encima */
+}
+
+.btncerrar img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+
+
+/* 🔥 FIN CAMBIO */
+
+.redes {
+  display: flex;
+}
+
+.fac img {
+  width: 35px;
+  height: 35px;
+}
+
+.redes button {
+  border: none;
+  background: none;
+}
+
+.gool img {
+  width: 30px;
+  height: 30px;
+  margin-left: 40px;
+}
+
+.redes {
+  padding-left: 200px;
+  margin-top: 20px;
+}
+
+.blanco p {
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+
+.inic input {
+  outline: none;
+  margin-top: 30px;
+}
+
+.inic button {
+  background: black;
+  color: white;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  font-family: "oswald", sans-serif;
+  margin-top: 40px;
+  border-radius: 50px;
+}
+
+.inic button:hover {
+  background: none;
+  color: black;
+  border: 2px black solid;
+}
+
+.gris h2 {
+  color: white;
+  padding: 0;
+  position: absolute;
+  top: 310px;
+  right: 400px;
+}
+
+.gris button {
+  position: absolute;
+  top: 380px;
+  right: 410px;
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  background: white;
+  color: black;
+  border: none;
+  text-transform: uppercase;
+  font-family: "oswald", sans-serif;
+  font-size: 20px;
+}
+
+.gris button:hover {
+  background: none;
+  border: 2px white solid;
+  color: white;
+}
+
+.abajo h2 {
+  color: white;
+}
+.popir {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  z-index: 200;
+  visibility: hidden;
+}
+
+.popir.active {
+  visibility: visible;
+}
+
+.sesionr {
+  background-color: rgb(138, 128, 128);
+  text-transform: uppercase;
+  font-family: "oswald", sans-serif;
+  font-size: 20px;
+  height: 500px;
+  width: 800px;
+  border-radius: 20px;
+  margin: 50px 50px;
+  text-align: center;
+}
+
+.sesionr .grisr {
+  position: absolute;
+  background-color: #f0b674;
+  height: 500px;
+  width: 500px;
+  right: 359px;
+  border-radius: 300px 20px 20px 300px;
+  box-shadow: -10px 10px 10px black;
+}
+
+.sesionr h2 {
+  font-weight: 300;
+  padding-top: 60px;
+}
+
+.redesr {
+  display: flex;
+  margin-left: 200px;
+  margin-top: 20px;
+}
+
+.redesr button {
+  border: none;
+  background: none;
+}
+
+.facr img {
+  width: 35px;
+  height: 35px;
+}
+
+.goolr img {
+  width: 30px;
+  height: 30px;
+  margin-left: 40px;
+}
+
+.sesionr .aaa {
+  position: absolute;
+  padding-top: 200px;
+  left: 400px;
+  color: white;
+}
+
+.sesionr .bbb {
+  position: absolute;
+  left: 410px;
+  top: 385px;
+  background: black;
+  color: white;
+  border: none;
+  width: 200px;
+  height: 45px;
+  border-radius: 50px;
+  font-family: "oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  align-items: center;
+}
+
+.btnr {
+  position: absolute;
+  top: 15px;       /* ajusta según el espacio que necesites */
+  left: 15px;
+  font-size: 25px;
+  color: black;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10; /* para asegurarte que quede por encima */
+}
+
+.btnr img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+
+.abajo p {
+  margin-top: 20px;
+  color: white;
+}
+
+.inpus input {
+  font-family: "oswald", sans-serif;
+  font-size: 20px;
+  border: none;
+  background: none;
+  border-bottom: 2px white solid;
+  width: 350px;
+  outline: none;
+  margin-top: 30px;
+  color: white;
+}
+
+.inpus input::placeholder {
+  color: white;
+  font-weight: 100;
+}
+
+.inic input::placeholder {
+  color: white;
+  font-weight: 100;
+}
+
+.grisr .reg {
+  width: 200px;
+  height: 45px;
+  margin-top: 30px;
+  border-radius: 50px;
+  border: none;
+  font-family: "oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.reg:hover {
+  background: none;
+  border: 2px white solid;
+  color: white;
+}
+
+.bbb:hover {
+  background: none;
+  border: 2px black solid;
+  color: black;
+}
+
+.popi.active{ transform: scale(1); opacity: 1;}
+.popi.active h2{animation: entradatitulo 2s ease forwards;}
+.popi.active p{animation: entradape 2.2s ease forwards;}
+.popi.active button{animation: entradaboton 3s ease forwards;}
+.popi.active input{animation: entradainput 4s ease forwards;}
+.popi.active #see-login {
+  animation: entradaimg 4s ease forwards;
+}
+.popi.active #olvido{animation: entradaolvido 4s ease forwards;}
+
+@keyframes entradatitulo{
+  from{
+    opacity: 0;
+    transform: translateY(-100%); 
+  }
+
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes entradape{
+  from{
+    opacity: 0;
+    transform: translateY(-100%); 
+  }
+
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes entradaboton{
+  from{
+    opacity: 0;
+    transform: translateY(-100%); 
+  }
+
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes entradainput{
+  from{
+    opacity: 0;
+    transform: translateY(-100%); 
+  }
+
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes entradaimg{
+  from{
+    opacity: 0;
+    transform: translateY(-100%); 
+  }
+
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes entradaolvido{
+  from{
+    opacity: 0;
+    transform: translateY(-100%); 
+  }
+
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.popir.active{ transform: scale(1); opacity: 1;}
+.popir.active h2{animation: entradatitulo 2s ease forwards;}
+.popir.active p{animation: entradape 2.2s ease forwards;}
+.popir.active button{animation: entradaboton 3s ease forwards;}
+.popir.active input{animation: entradainput 4s ease forwards;}
+.popir.active #see-register {
+  animation: entradaimg 4s ease forwards;
+}
+.popir.active #olvido{animation: entradaolvido 4s ease forwards;}
+
+.password-container input {
+  width: 350px;
+  box-sizing: border-box;
+}
+.password-container input {
+width: 350px;
+height: 40px; 
+padding: 5px 10px; 
+box-sizing: border-box; 
+font-family: 'Oswald', sans-serif;
+font-size: 20px;
+letter-spacing: 1px; 
+}
+.olvido-contra {
+display: block;
+margin-top: 10px;
+color: white; 
+font-size: 14px;
+text-decoration: underline;
+font-family: "Oswald", sans-serif;
+text-align: center; 
+}
+
+.olvido-contra:hover {
+color: #ffcccc; 
+}
+.toggle-password {
+  position: absolute;
+  right: 80px; 
+  top: 50%;
+  transform: translateY(50%); 
+  cursor: pointer;
+  width: 20px; 
+  height: 20px; 
+}
+.inpus {
+  position: relative;
+  width: 100%;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.popi .btncerrar {
+    top: 130px;   
+    right: 1100px; 
+    left: auto;  
+}
+
+.popir .btnr {
+    top: 130px;   
+    right: 380px; 
+    left: auto;  
+}
