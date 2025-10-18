@@ -1,50 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style-factura electronica.css">
     <link rel="stylesheet" href="/css/carrito.css">
-    <link rel="stylesheet" href="/css/form.css">
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <button class="menu-btn" onclick="abrirMenu()"><img src="/image/menu-svgrepo-com.svg" alt="menu" class="menu-icon"></button>
-        <div class="logo">
-            <img src="/image/Bendito (2)-Recuperado.png" alt="logo" class="header-logo">
-        </div>
-        
-        <div>
-            <button class="menu-btn" onclick="abrirLogin()" id="botoncin"><img src="/image/user-svgrepo-com.svg" alt="user" class="menu-icon"></button>
-            <button class="menu-btn" onclick="abrirCarrito()"><img src="/image/cart-shopping-fast-svgrepo-com.svg" alt="carrito" class="menu-icon"></button>
-        </div>
-    </header>
+  <!-- HEADER -->
+  <header>
+    <button class="menu-btn" onclick="abrirMenu()">
+      <img src="/image/menu-svgrepo-com.svg" alt="menu" class="menu-icon">
+    </button>
 
-<div class="carrito-sidebar" id="carritoSidebar">
-<button class="cerrar-carrito" onclick="cerrarCarrito()">
-    <img src="/image/close-ellipse-svgrepo-com.svg" alt="Cerrar">
-</button>
-
-  <h3>Tu Carrito</h3>
-
-  <div id="carrito-items"></div>
-
-  <div class="carrito-footer">
-    <div class="carrito-total">
-      Total: <span id="carrito-total">$0</span>
+    <div class="logo">
+      <img src="/image/Bendito (2)-Recuperado.png" alt="logo" class="header-logo">
     </div>
-    <button class="finalizar-compra">Finalizar compra</button>
+    
+    <div>
+      <button class="menu-btn" onclick="abrirLogin()" id="botoncin">
+        <img src="/image/user-svgrepo-com.svg" alt="user" class="menu-icon">
+      </button>
+      <button class="menu-btn" onclick="abrirCarrito()">
+        <img src="/image/cart-shopping-fast-svgrepo-com.svg" alt="carrito" class="menu-icon">
+      </button>
+    </div>
+  </header>
+
+  <!-- CARRITO -->
+  <div class="carrito-sidebar" id="carritoSidebar">
+    <button class="cerrar-carrito" onclick="cerrarCarrito()">
+      <img src="/image/close-ellipse-svgrepo-com.svg" alt="Cerrar">
+    </button>
+
+    <h3>Tu Carrito</h3>
+    <div id="carrito-items"></div>
+
+    <div class="carrito-footer">
+      <div class="carrito-total">
+        Total: <span id="carrito-total">$0</span>
+      </div>
+      <button class="finalizar-compra">Finalizar compra</button>
+    </div>
   </div>
-</div>
-<div class="carrito-sidebar" id="carritoSidebar">
 
-<div class="overlay" id="carritoOverlay" onclick="cerrarCarrito()"></div>
+  <div class="overlay" id="carritoOverlay" onclick="cerrarCarrito()"></div>
 
-<div class="sidebar" id="sidebar">
+  <!-- MENÚ LATERAL -->
+  <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
-        <h2>DulceArte</h2>
-        <img src="/image/logo-final-negro.png" alt="Logo" class="sidebar-logo">
+      <h2>DulceArte</h2>
+      <img src="/image/logo-final-negro.png" alt="Logo" class="sidebar-logo">
     </div>
     <a href="#"><img src="/image/shop-svgrepo-com.svg" alt="Tienda" class="icon"> Tienda</a>
     <a href="#"><img src="/image/factura.svg" alt="Factura" class="icon"> Factura Electrónica</a>
@@ -53,142 +60,90 @@
     <a href="#"><img src="/image/policy-svgrepo-com.svg" alt="Políticas" class="icon"> Políticas</a>
     <a href="#"><img src="/image/blog-svgrepo-com.svg" alt="Blogs" class="icon"> Blogs</a>
     <a href="#"><img src="/image/work-svgrepo-com.svg" alt="Trabaja con nosotros" class="icon"> Trabaja con nosotros</a>
-        
+    
     <br>
     <h2>Encuéntranos en:</h2>
     <div class="social-icons-sidebar">
-        <a href="#"><img src="/image/facebook-svgrepo-com.svg" alt="Facebook"></a>
-        <a href="#"><img src="/image/instagram-svgrepo-com.svg" alt="Instagram"></a>
-        <a href="#"><img src="/image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
-    </div>
-</div>
-
-<div class="overlay" id="overlay" onclick="cerrarMenu()"></div>
-
-    <div class="cfd" id="aparecerr">
-        <section class="aparecer">
-            <div class="popi" id="popis">
-                <div class="sesion">
-                    <div class="blanco">
-                        <div class="arriba">
-                            <h2 class="ses">iniciar sesión</h2>
-                            <div class="redes">
-                                <button class="fac"><img src="image/facebook.svg" alt=""></button>
-                                <button class="gool"><img src="image/google.svg" alt=""></i></button>
-                            </div>
-                            <a href="#" id="cerrar" class="btncerrar"><img src="image/close-ellipse-svgrepo-com.svg" alt="close"></a>
-                        </div>
-                            <div class="gris">
-                                <h2 class="nono">¿no tienes cuenta?</h2>
-                                <button id="regi">registrarse</button>
-                            </div>
-                        <p>o</p>
-                        <div class="inic">
-                            <input type="email" name="" id="" placeholder="Correo" required>
-                            <div class="password-container">
-                                <input type="password" id="password-login" placeholder="Contraseña" required>
-                                <img src="image/visualizar.svg" alt="mostrar" class="toggle-password" id="see-login">
-                            </div>
-                            <a href="html/recuperacion.html" class="olvido-contra" id="olvido">¿Olvidaste tu contraseña?</a>
-                            <button class="login">inciar sesión</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
-    
-    <div class="popir" id="aparecers">
-        <div class="sesionr" id="popir">
-            <h2 class="aaa">¿ya tienes cuenta?</h2>
-            <button class="bbb" id="ini">iniciar sesión</button>
-            <a href="#" id="cerrarr" class="btnr"><img src="image/close-ellipse-svgrepo-com.svg" alt="close"></a>
-            <div class="grisr">
-                <div class="blancor">
-                </div>
-                <div class="abajo">
-                    <h2>registrarse</h2>
-                    <div class="redesr">
-                        <button class="facr"><img src="image/facebook.svg" alt=""></button>
-                        <button class="goolr"><img src="image/google.svg" alt=""></i></button>
-                    </div>
-                    <p>o</p>
-                </div>
-                <div class="inpus">
-                    <input type="email" name="" id="" placeholder="Correo" required><br>
-                    <div class="password-container">
-                        <input type="password" id="password-register" placeholder="Contraseña" required>
-                        <img src="image/visualizar.svg" alt="mostrar" class="toggle-password" id="see-register">
-                    </div>
-                </div>
-                <button class="reg" id="registrarse">registrarse</button>
-            </div>
-        </div>
-    </div>
-<main>
-    <section class="factura-electronica">
-        <h2>Factura Electrónica</h2>
-        <p>Consulta o descarga tu factura de manera rápida y segura.</p>
-
-  <form class="form-factura">
-    <label for="numeroFactura">Número de factura:</label>
-    <input type="text" id="numeroFactura" placeholder="Ej: FAC-12345" required>
-    <label for="documento">Valor pedido</label>
-    <input type="text" id="documento" placeholder="Ej: 600.000" required>
-    <button type="submit">Buscar factura</button>
-  </form>
-
-  <div class="resultado-factura">
-    <h3>Factura #FAC-12345</h3>
-    <p><strong>Cliente:</strong> Juan Pérez</p>
-    <p><strong>Fecha:</strong> 12/10/2025</p>
-    <p><strong>Total:</strong> $85.000</p>
-    <div class="acciones">
-      <button>Descargar PDF</button>
-      <button>Descargar XML</button>
-      <button>Enviar al correo</button>
+      <a href="#"><img src="/image/facebook-svgrepo-com.svg" alt="Facebook"></a>
+      <a href="#"><img src="/image/instagram-svgrepo-com.svg" alt="Instagram"></a>
+      <a href="#"><img src="/image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
     </div>
   </div>
 
-</section>
-</main>
-<footer class="footer">
-    <div class="footer-section">
-        <h3>Enlaces de interés</h3>
-        <ul>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Política de tratamiento de datos</a></li>
-            <li><a href="#">Ventas corporativas</a></li>
-            <li><a href="#">Facturación electrónica</a></li>
-        </ul>
-    </div>
-    <div class="footer-section">
-        <h3>Nosotros</h3>
-        <ul>
-            <li><a href="#">Acerca de Venecia</a></li>
-            <li><a href="#">Trabaja con nosotros</a></li>
-            <li><a href="#">Blogs</a></li>
-        </ul>
-    </div>
-    <div class="footer-section">
-        <h3>Atención al cliente</h3>
-        <ul>
-            <li><span class="/icon-chat"></span> <a href="#">Contáctanos</a></li>
-            <li><span class="/icon-email"></span> info@nosequenombreponerle .com</li>
-        </ul>
-    </div>
-    <div class="footer-section">
-        <h3>Encuéntranos en:</h3>
-        <div class="social-icons">
-            <a href="#"><img src="/image/facebook-svgrepo-com.svg" alt="Facebook"></a>
-            <a href="#"><img src="/image/instagram-svgrepo-com.svg" alt="Instagram"></a>
-            <a href="#"><img src="/image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
+  <div class="overlay" id="overlay" onclick="cerrarMenu()"></div>
+
+<main>
+    <section class="factura-electronica">
+      <h2>Factura Electrónica</h2>
+      <p>Proximamente consulta o descarga tu factura de manera rápida y segura.</p>
+
+      <form class="form-factura">
+        <label for="numeroFactura">Número de factura:</label>
+        <input type="text" id="numeroFactura" placeholder="Ej: FAC-12345" required>
+
+        <label for="documento">Valor pedido:</label>
+        <input type="text" id="documento" placeholder="Ej: 600.000" required>
+
+        <button type="submit">Buscar factura</button>
+      </form>
+
+      <div class="resultado-factura">
+        <h3>Factura #FAC-12345</h3>
+        <p><strong>Cliente:</strong> Juan Pérez</p>
+        <p><strong>Fecha:</strong> 12/10/2025</p>
+        <p><strong>Total:</strong> $85.000</p>
+        <div class="acciones">
+          <button>Descargar PDF</button>
+          <button>Descargar XML</button>
+          <button>Enviar al correo</button>
         </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-section">
+      <h3>Enlaces de interés</h3>
+      <ul>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Política de tratamiento de datos</a></li>
+        <li><a href="#">Ventas corporativas</a></li>
+        <li><a href="#">Facturación electrónica</a></li>
+      </ul>
     </div>
-    <script src="/js/carrousel.js"></script>
-    <script src="/js/carrito.js"></script>
-</footer>
-    <script src="/js/ver.js"></script>
-    <script src="/js/nav.js"></script>
-    <script src="/js/form.js"></script>
+
+    <div class="footer-section">
+      <h3>Nosotros</h3>
+      <ul>
+        <li><a href="#">Acerca de Venecia</a></li>
+        <li><a href="#">Trabaja con nosotros</a></li>
+        <li><a href="#">Blogs</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Atención al cliente</h3>
+      <ul>
+        <li><a href="#">Contáctanos</a></li>
+        <li>info@nosequenombreponerle.com</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Encuéntranos en:</h3>
+      <div class="social-icons">
+        <a href="#"><img src="/image/facebook-svgrepo-com.svg" alt="Facebook"></a>
+        <a href="#"><img src="/image/instagram-svgrepo-com.svg" alt="Instagram"></a>
+        <a href="#"><img src="/image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="/js/carrito.js"></script>
+  <script src="/js/ver.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/form.js"></script>
 </body>
 </html>
