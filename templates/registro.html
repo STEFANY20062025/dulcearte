@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Exitoso – DulceArte</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap');
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #ffe6e6, #fff5f2);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      padding: 50px 40px;
+      text-align: center;
+      max-width: 450px;
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    img.logo {
+      width: 130px;
+      height: auto;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      color: #d97373;
+      font-size: 28px;
+      margin-bottom: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    p {
+      color: #555;
+      font-size: 16px;
+      margin-bottom: 35px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff8585;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #ff6f6f;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="{{ url_for('static', filename='img/logo-final-negro.png') }}" alt="Logo DulceArte" class="logo">
+    <h1>¡Felicidades!</h1>
+    <p>
+      Te has registrado con éxito en <strong>DulceArte</strong>.<br>
+      Ahora eres parte de esta dulce familia.<br>
+      Solo queda iniciar sesión y empezar a comprar tus antojos.
+    </p>
+
+  </div>
+</body>
+</html>

@@ -495,3 +495,117 @@ p, span, a {
 .right-col::-webkit-scrollbar-thumb:hover {
   background: #e29b45;
 }
+
+/* CONTENEDOR GENERAL */
+.left-col {
+  width: 260px;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  padding: 15px;
+  font-family: "Poppins", sans-serif;
+  overflow: visible; /* ← asegura que nada se corte */
+}
+
+/* ENCABEZADO */
+.categories h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* LISTA PRINCIPAL */
+.cat-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ITEM PRINCIPAL */
+.cat-item {
+  display: block;
+  margin-bottom: 5px;
+  overflow: visible; /* ← importante */
+}
+
+/* ENCABEZADO DE CADA CATEGORÍA */
+.cat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 18px 10px 14px; /* ← más espacio a la derecha */
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  background: #fff;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.cat-header:hover {
+  background: #f7f7f7;
+}
+
+/* ICONO DE CATEGORÍA */
+.icon-l {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+/* TEXTO */
+.cat-header span {
+  flex: 1;
+  margin-left: 8px;
+  text-align: left;
+}
+
+/* FLECHA */
+.arrow {
+  flex-shrink: 0;
+  width: 20px; /* ← un poco más grande */
+  height: 18px;
+  transition: transform 0.35s ease;
+  margin-left: 6px;
+  margin-right: 6px; /* ← separa del borde */
+  transform-origin: center center; /* ← rotación perfecta */
+}
+
+/* ROTAR FLECHA CUANDO SE ABRE */
+.cat-item.active .arrow {
+  transform: rotate(90deg);
+}
+
+/* SUBLISTA */
+.cat-sub {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 40px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* SUBLISTA VISIBLE */
+.cat-item.active .cat-sub {
+  max-height: 200px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ELEMENTOS DE SUBLISTA */
+.cat-sub li {
+  padding: 6px 0;
+  color: #555;
+  cursor: pointer;
+}
+
+.cat-sub li:hover {
+  color: #000;
+  font-weight: 500;
+}
