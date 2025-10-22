@@ -543,3 +543,63 @@ p, span, a {
   transform: scale(2); 
   cursor: zoom-out;
 }
+
+.vista-producto {
+  cursor: zoom-in;
+}
+
+#postre-base {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.vista-producto:hover #postre-base {
+  transform: scale(1.8); /* Ajusta el nivel de zoom */
+  cursor: zoom-out;
+}
+
+#decoraciones-contenedor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Para que los decoraciones no bloqueen el zoom */
+}
+
+
+#postre-base {
+  width: 100%;
+  display: block;
+}
+
+.lupa {
+  position: absolute;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  cursor: none;
+  /* Tamaño de la lupa */
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  display: none; /* solo se muestra al mover el mouse */
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.lupa img {
+  position: absolute;
+  width: 200%; /* el zoom de la imagen dentro de la lupa */
+  height: auto;
+}
+.btn-agregar.agotado {
+  background-color: #b0b0b0;
+  color: white;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+#stock {
+  font-weight: bold;
+  margin-top: 10px;
+}

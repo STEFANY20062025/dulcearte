@@ -1,3 +1,4 @@
+/* 🔹 Fondo oscuro cuando se abre el carrito */
 .overlay {
   display: none;
   position: fixed;
@@ -9,6 +10,7 @@
   z-index: 9998;
 }
 
+/* 🔹 Contenedor lateral del carrito */
 .carrito-sidebar {
   background: #fff;
   width: 320px;
@@ -19,7 +21,7 @@
   box-shadow: -2px 0 6px rgba(0,0,0,0.2);
   padding: 20px;
   transition: right 0.3s ease;
-  z-index: 9998;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
 }
@@ -33,6 +35,7 @@
   text-align: left;
 }
 
+/* 🔹 Lista de productos en el carrito */
 #carrito-items {
   flex: 1;
   overflow-y: auto;
@@ -50,62 +53,96 @@
   border-radius: 5px;
 }
 
-#carrito-items::-webkit-scrollbar-thumb:hover {
-  background: #eda557cb;
-}
-
+/* 🔹 Cada ítem del carrito */
 .carrito-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background: #f9f9f9;
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
 }
 
-.carrito-item img {
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
-  margin-right: 10px;
+.carrito-item:hover {
+  transform: scale(1.02);
 }
 
+/* 🔹 Información clickeable (ir a personalizar) */
 .carrito-info {
+  display: flex;
+  align-items: center;
   flex: 1;
+  gap: 10px;
+  cursor: pointer;
 }
 
-.carrito-info h4 {
+.carrito-info:hover h4 {
+  text-decoration: underline;
+  color: #eda557cb;
+}
+
+/* 🔹 Imagen del producto */
+.carrito-info img {
+  width: 55px;
+  height: 55px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* 🔹 Texto dentro del carrito */
+.carrito-texto h4 {
   margin: 0;
   font-size: 0.95em;
+  color: #333;
 }
 
-.carrito-info p {
-  margin: 3px 0;
-  font-size: 0.9em;
+.carrito-texto p {
+  margin: 2px 0;
+  font-size: 0.85em;
   color: #555;
 }
 
+/* 🔹 Botones de control */
 .carrito-controls {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
 }
 
 .carrito-controls button {
   background: #eda557cb;
   border: none;
   color: white;
-  padding: 4px 8px;
+  padding: 4px 7px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
+  transition: all 0.2s ease;
 }
 
 .carrito-controls button:hover {
-  background: #eda557cb;
+  background: #f0b764;
+  transform: scale(1.05);
 }
 
+.carrito-controls button:active {
+  transform: scale(0.95);
+}
+
+/* 🔹 Botón de eliminar */
+.carrito-controls button:last-child {
+  background: #ff6b6b;
+}
+
+.carrito-controls button:last-child:hover {
+  background: #ff4a4a;
+}
+
+/* 🔹 Footer del carrito */
 .carrito-footer {
   border-top: 2px solid #eda557cb;
   padding-top: 10px;
@@ -121,6 +158,7 @@
   margin-bottom: 10px;
 }
 
+/* 🔹 Botón de finalizar compra */
 .finalizar-compra {
   width: 100%;
   padding: 12px;
@@ -133,14 +171,16 @@
   font-size: 1em;
   position: sticky;
   bottom: 0;
+  transition: all 0.3s ease;
 }
 
 .finalizar-compra:hover {
-  background: #f5b74b; 
-  transform: scale(1.05); 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); 
+  background: #f5b74b;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
+/* 🔹 Botón para cerrar carrito */
 .cerrar-carrito {
   position: absolute;
   top: 15px;
@@ -161,11 +201,10 @@
   transform: scale(1.2);
 }
 
-.cerrar-carrito svg {
-  transition: transform 0.2s ease;
-}
-
-.cerrar-carrito:hover svg {
-  transform: scale(1.2);
-  stroke: #eda557cb;
+/* 🔹 Estado vacío */
+#carrito-items p {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  margin-top: 20px;
 }

@@ -2,73 +2,68 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>DulceArte — Productos</title>
+  <title>DulceArte — Personalizar Producto</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/image/logo-final.png">
-  <link rel="stylesheet" href="/css/carrito.css">
   <link rel="stylesheet" href="/css/style-personalizar.css">
+  <link rel="stylesheet" href="/css/carrito.css">
   <link rel="stylesheet" href="/css/form.css">
+  <link rel="stylesheet" href="/css/modal-perfil.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-    <script src="/js/ver.js"></script>
 </head>
 <body>
 
-    <header>
-        <button class="menu-btn" onclick="abrirMenu()"><img src="/image/menu-svgrepo-com.svg" alt="menu" class="menu-icon"></button>
-        <div class="logo">DulceArte 
-            <img src="/image/logo-final-negro.png" alt="logo" class="header-logo">
-        </div>
-        
-        <div>
-            <button class="menu-btn" onclick="abrirLogin()" id="botoncin"><img src="/image/user-svgrepo-com.svg" alt="user" class="menu-icon"></button>
-            <button class="menu-btn" onclick="abrirCarrito()"><img src="/image/cart-shopping-fast-svgrepo-com.svg" alt="carrito" class="menu-icon"></button>
-        </div>
-    </header>
-
-
-
-    <div class="carrito-sidebar" id="carritoSidebar">
-<button class="cerrar-carrito" onclick="cerrarCarrito()">
-    <img src="/image/close-ellipse-svgrepo-com.svg" alt="Cerrar">
-</button>
-
-  <h3>Tu Carrito</h3>
-
-  <div id="carrito-items"></div>
-
-  <div class="carrito-footer">
-    <div class="carrito-total">
-      Total: <span id="carrito-total">$0</span>
+  <!-- HEADER -->
+  <header>
+    <button class="menu-btn" onclick="abrirMenu()"><img src="/image/menu-svgrepo-com.svg" alt="menu" class="menu-icon"></button>
+    <div class="logo">DulceArte 
+      <img src="/image/logo-final-negro.png" alt="logo" class="header-logo">
     </div>
-    <button class="finalizar-compra">Finalizar compra</button>
-  </div>
-</div>
+    <div>
+      <a href="/html/productos.html"><img src="/image/shop-svgrepo-com.svg" class="menu-icon"></a>
+      <button class="menu-btn" onclick="abrirLogin()" id="botoncin"><img src="/image/user-svgrepo-com.svg" alt="user" class="menu-icon"></button>
+      <button class="menu-btn" onclick="abrirCarrito()"><img src="/image/cart-shopping-fast-svgrepo-com.svg" alt="carrito" class="menu-icon"></button>
+    </div>
+  </header>
 
-
-<div class="sidebar" id="sidebar">
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
-        <h2>DulceArte</h2>
-        <img src="/image/logo-final-negro.png" alt="Logo" class="sidebar-logo">
+      <h2>DulceArte</h2>
+      <img src="/image/logo-final-negro.png" alt="Logo" class="sidebar-logo">
     </div>
 
-    <a href="#"><img src="/image/shop-svgrepo-com.svg" alt="Tienda" class="icon"> Tienda</a>
-    <a href="#"><img src="/image/factura.svg" alt="Factura" class="icon"> Factura Electrónica</a>
-    <a href="#"><img src="/image/contacto.svg" alt="Contáctanos" class="icon"> Contáctanos</a>
-    <a href="#"><img src="/image/about-svgrepo-com.svg" alt="Quiénes somos" class="icon"> Quiénes somos</a>
-    <a href="#"><img src="/image/policy-svgrepo-com.svg" alt="Políticas" class="icon"> Políticas</a>
-    <a href="#"><img src="/image/blog-svgrepo-com.svg" alt="Blogs" class="icon"> Blogs</a>
-    <a href="#"><img src="/image/work-svgrepo-com.svg" alt="Trabaja con nosotros" class="icon"> Trabaja con nosotros</a>
+    <a href="/index.html"><img src="/image/home-svgrepo-com.svg" alt="Index" class="icon"> Inicio</a>
+    <a href="/html/Factura Electronica.html"><img src="/image/factura.svg" class="icon"> Factura Electrónica</a>
+    <a href="#"><img src="/image/contacto.svg" class="icon"> Contáctanos</a>
+    <a href="#"><img src="/image/about-svgrepo-com.svg" class="icon"> Quiénes somos</a>
+    <a href="#"><img src="/image/policy-svgrepo-com.svg" class="icon"> Políticas</a>
+    <a href="#"><img src="/image/blog-svgrepo-com.svg" class="icon"> Blogs</a>
+    <a href="#"><img src="/image/work-svgrepo-com.svg" class="icon"> Trabaja con nosotros</a>
 
-    <br>
     <h2>Encuéntranos en:</h2>
     <div class="social-icons-sidebar">
-        <a href="#"><img src="/image/facebook-svgrepo-com.svg" alt="Facebook"></a>
-        <a href="#"><img src="/image/instagram-svgrepo-com.svg" alt="Instagram"></a>
-        <a href="#"><img src="/image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
+      <a href="#"><img src="/image/facebook-svgrepo-com.svg" alt="Facebook"></a>
+      <a href="#"><img src="/image/instagram-svgrepo-com.svg" alt="Instagram"></a>
+      <a href="#"><img src="/image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
     </div>
-</div>
-<div class="overlay" id="overlay" onclick="cerrarMenu()"></div>
+  </div>
+  <div class="overlay" id="overlay" onclick="cerrarMenu()"></div>
 
+  <!-- CARRITO -->
+  <div class="carrito-sidebar" id="carritoSidebar">
+    <button class="cerrar-carrito" onclick="cerrarCarrito()">
+      <img src="/image/close-ellipse-svgrepo-com.svg" alt="Cerrar">
+    </button>
+    <h3>Tu Carrito</h3>
+    <div id="carrito-items"></div>
+    <div class="carrito-footer">
+      <div class="carrito-total">
+        Total: <span id="carrito-total">$0</span>
+      </div>
+      <button class="finalizar-compra">Finalizar compra</button>
+    </div>
+  </div>
 
     <div class="cfd" id="aparecerr">
         <section class="aparecer">
@@ -131,104 +126,162 @@
     </div>
 
 
-<section class="personalizar-container">
+  <!-- PERSONALIZADOR -->
+  <section class="personalizar-container">
+   <div class="vista-producto">
+  <img id="postre-base" src="" alt="Imagen del producto">
+  <div id="decoraciones-contenedor"></div>
+  <div class="lupa" id="lupa"><img id="lupa-img" src=""></div>
+</div>
 
-  <!-- Vista del producto -->
-  <div class="vista-producto">
-    <img src="/image/torta-chocolate-chispas.png" alt="Postre de Chocolate" id="postre-base">
-    <div id="decoraciones-contenedor">
-      <!-- Aquí se superpondrían decoraciones (solo visual, sin JS aún) -->
-      <img src="/image/chispa.png" alt="Chispas" class="decoracion-preview">
-      <img src="/image/fresas.png" alt="Fresas" class="decoracion-preview">
+
+    <div class="configuracion">
+      <h2 id="producto-nombre">Cargando...</h2>
+      <p id="producto-descripcion">Por favor espera un momento.</p>
+      <h3 id="producto-precio">Precio base: —</h3>
+      <p id="stock">En stock: —</p>
+
+      <label for="texto">Texto personalizado:</label>
+      <input type="text" id="texto" placeholder="Ej: Feliz Cumpleaños">
+
+      <h4>Decoraciones disponibles</h4>
+      <div class="decoraciones-lista" id="decoraciones-lista">
+        <!-- Se cargan con JS -->
+      </div>
+
+      <button class="btn-agregar" id="btn-agregar">
+        Agregar al pedido 
+        <img src="/image/cart-shopping-fast-svgrepo-com.svg" alt="" class="icon-contenedor">
+      </button>
     </div>
-  </div>
+  </section>
 
-  <!-- Panel de configuración -->
-  <div class="configuracion">
-    <h2>Postre de Chocolate</h2>
-    <p>Delicioso postre artesanal de chocolate con base cremosa y textura suave. Ideal para celebraciones o antojos dulces.</p>
-    <h3>Precio base: $7.500</h3>
-
-    <label for="texto">Texto personalizado:</label>
-    <input type="text" id="texto" placeholder="Ej: Feliz Cumpleaños">
-
-    <h4>Decoraciones disponibles</h4>
-    <div class="decoraciones-lista">
-      <div class="decoracion-item">
-        <img src="/image/chispa.png" alt="Chispas de colores" class="decoracion-opcion">
-        <p>Chispas</p>
-      </div>
-
-      <div class="decoracion-item">
-        <img src="/image/fresas.png" alt="Rodajas de fresa" class="decoracion-opcion">
-        <p>Fresas</p>
-      </div>
-
-      <div class="decoracion-item">
-        <img src="/image/chocolate.png" alt="Trozos de chocolate" class="decoracion-opcion">
-        <p>Trozos de Chocolate</p>
-      </div>
-
-      <div class="decoracion-item">
-        <img src="/image/cereza.png" alt="Cerezas" class="decoracion-opcion">
-        <p>Cerezas</p>
-      </div>
-
-      <div class="decoracion-item">
-        <button class="decoracion-texto">Texto “Te Amo”</button>
-      </div>
-
-      <div class="decoracion-item">
-        <button class="decoracion-texto">Texto “Feliz Cumpleaños”</button>
-      </div>
-    </div>
-
-    <button class="btn-agregar">Agregar al pedido <img src="/image/cart-shopping-fast-svgrepo-com.svg" alt="" class="icon-contenedor"></button>
-  </div>
-</section>
-
-
-
-<footer class="footer">
+  <!-- FOOTER -->
+  <footer class="footer">
     <div class="footer-section">
-        <h3>Enlaces de interés</h3>
-        <ul>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Política de tratamiento de datos</a></li>
-            <li><a href="#">Ventas corporativas</a></li>
-            <li><a href="#">Facturación electrónica</a></li>
-        </ul>
+      <h3>Enlaces de interés</h3>
+      <ul>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Política de tratamiento de datos</a></li>
+        <li><a href="#">Ventas corporativas</a></li>
+        <li><a href="#">Facturación electrónica</a></li>
+      </ul>
     </div>
     <div class="footer-section">
-        <h3>Nosotros</h3>
-        <ul>
-            <li><a href="#">Acerca de Venecia</a></li>
-            <li><a href="#">Trabaja con nosotros</a></li>
-            <li><a href="#">Blogs</a></li>
-        </ul>
+      <h3>Nosotros</h3>
+      <ul>
+        <li><a href="#">Acerca de Venecia</a></li>
+        <li><a href="#">Trabaja con nosotros</a></li>
+        <li><a href="#">Blogs</a></li>
+      </ul>
     </div>
     <div class="footer-section">
-        <h3>Atención al cliente</h3>
-        <ul>
-            <li><span class="icon-chat"></span> <a href="#">Contáctanos</a></li>
-            <li><span class="icon-email"></span> info@nosequenombreponerle .com</li>
-        </ul>
+      <h3>Atención al cliente</h3>
+      <ul>
+        <li><a href="#">Contáctanos</a></li>
+        <li>info@nosequenombreponerle.com</li>
+      </ul>
     </div>
     <div class="footer-section">
-        <h3>Encuéntranos en:</h3>
-        <div class="social-icons">
-            <a href="#"><img src="/image/facebook-svgrepo-com.svg" alt="Facebook"></a>
-            <a href="#"><img src="/image/instagram-svgrepo-com.svg" alt="Instagram"></a>
-            <a href="#"><img src="/image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
-        </div>
+      <h3>Encuéntranos en:</h3>
+      <div class="social-icons">
+        <a href="#"><img src="/image/facebook-svgrepo-com.svg" alt="Facebook"></a>
+        <a href="#"><img src="/image/instagram-svgrepo-com.svg" alt="Instagram"></a>
+        <a href="#"><img src="/image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
+      </div>
     </div>
-    <script src="js/carrousel.js"></script>
-</footer>
-<script src="/js/form.js"></script>
-<script src="/js/nav.js"></script>
-<script src="/js/carrito.js"></script>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="/js/nav.js"></script>
+  <script src="/js/form.js"></script>
+  <script src="/js/carrito.js"></script>
 
 <script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const params = new URLSearchParams(window.location.search);
+  const productoId = params.get("id");
+
+  const btnAgregar = document.getElementById("btn-agregar");
+  const stockTexto = document.getElementById("stock");
+
+  if (!productoId) {
+    alert("Producto no especificado.");
+    return;
+  }
+
+  try {
+    const respuesta = await fetch(`http://localhost:5000/producto/${productoId}`);
+    const data = await respuesta.json();
+
+    if (data.status !== "ok") {
+      alert("No se pudo cargar el producto.");
+      return;
+    }
+
+    const producto = data.producto;
+    const decoraciones = data.decoraciones;
+
+    // 🔹 Función para formatear precios en COP
+    function formatearCOP(valor) {
+      const numero = Number(valor);
+      if (isNaN(numero)) return "COP 0,00";
+      return "COP " + numero.toLocaleString("es-CO", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      });
+    }
+
+    // 🔹 Mostrar datos del producto
+    document.getElementById("producto-nombre").textContent = producto.nombre;
+    document.getElementById("producto-descripcion").textContent = producto.descripcion;
+    document.getElementById("producto-precio").textContent = `Precio base: ${formatearCOP(producto.precio)}`;
+    document.getElementById("postre-base").src = producto.imagen;
+
+    // 🔹 Mostrar stock y manejar estado de agotado
+    if (producto.disponible <= 0) {
+      stockTexto.textContent = "Agotado";
+      stockTexto.style.color = "red";
+      btnAgregar.textContent = "No disponible";
+      btnAgregar.disabled = true;
+      btnAgregar.classList.add("agotado");
+      btnAgregar.style.cursor = "not-allowed";
+    } else {
+      stockTexto.textContent = `En stock: ${producto.disponible} unidad/es`;
+      stockTexto.style.color = "green";
+      btnAgregar.disabled = false;
+      btnAgregar.classList.remove("agotado");
+      btnAgregar.style.cursor = "pointer";
+    }
+
+    // 🔹 Mostrar decoraciones
+    const lista = document.getElementById("decoraciones-lista");
+    lista.innerHTML = "";
+
+    decoraciones.forEach((deco) => {
+      if (deco.tipo === "objeto") {
+        lista.innerHTML += `
+          <div class="decoracion-item">
+            <img src="${deco.imagen}" alt="${deco.nombre}" class="decoracion-opcion">
+            <p>${deco.nombre} - ${formatearCOP(deco.precio)} - ${deco.activo} u.</p>
+          </div>`;
+      } else if (deco.tipo === "texto") {
+        lista.innerHTML += `
+          <div class="decoracion-item">
+            <button class="decoracion-texto">${deco.nombre}</button>
+          </div>`;
+      }
+    });
+
+  } catch (err) {
+    console.error("Error al cargar producto:", err);
+    alert("Error de conexión con el servidor.");
+  }
+});
+</script>
+
+
+  <script>
 const vista = document.querySelector('.vista-producto');
 const imagen = document.getElementById('postre-base');
 
@@ -249,6 +302,64 @@ vista.addEventListener('mouseleave', () => {
 });
 </script>
 
+<div id="modalPerfil" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModalPerfil()">&times;</span>
 
+    <div class="perfil-info">
+      <img src="/image/user-svgrepo-com.svg" alt="Usuario">
+      <h2>Perfil de Usuario</h2>
+      <p>Actualiza tus datos personales o confirma tu correo electrónico.</p>
+
+      <button class="btn-cerrar-sesion" onclick="cerrarSesion()">
+            <img src="/image/keyboard-backspace-svgrepo-com.svg" alt="Salir">
+            Cerrar sesión
+        </button>
+    </div>
+
+    <form id="formPerfil">
+      <label>Correo (no editable)</label>
+      <input type="email" id="correo" disabled>
+      <small id="estadoCorreo" style="color:gray;">No confirmado</small>
+
+
+      <button type="button" id="btnConfirmCorreo">Confirmar correo en Gmail</button>
+
+      <label>Contraseña</label>
+      <input type="password" id="contrasena" placeholder="********">
+
+      <label>Nombre</label>
+      <input type="text" id="nombre">
+
+      <label>Apellido</label>
+      <input type="text" id="apellido">
+
+      <label>Documento</label>
+      <input type="text" id="documento">
+
+      <label for="tipoDocumento">Tipo de documento</label>
+        <select id="tipoDocumento" required>
+            <option value="" disabled selected>Seleccione...</option>
+            <option value="CC">Cédula de Ciudadanía (C.C.)</option>
+            <option value="TI">Tarjeta de Identidad (T.I.)</option>
+            <option value="CE">Cédula de Extranjería (C.E.)</option>
+            <option value="PA">Pasaporte</option>
+            <option value="PEP">Permiso Especial de Permanencia (PEP)</option>
+        </select>
+
+
+      <label>Dirección</label>
+      <input type="text" id="direccion" placeholder="Ejemplo: Calle 10 #25-36, Cartago, Valle del cauca">
+
+      <label>Celular</label>
+      <input type="text" id="celular">
+
+      <button type="submit">Guardar cambios</button>
+    </form>
+  </div>
+</div>
+
+<script src="/js/enviar-confirmacion.js"></script>
+<script src="/js/sesion.js"></script>
 </body>
 </html>

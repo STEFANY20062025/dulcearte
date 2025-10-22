@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({
           correo: correo,
           contrasena: contrasena
-        })
+        }),
+        credentials: 'include'
       });
 
       const data = await response.json();
@@ -31,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert(data.mensaje || "Inicio de sesión exitoso");
         
         // Guardar datos de sesión en el navegador si quieres
-        localStorage.setItem("usuario_correo", correo);
+        localStorage.setItem("usuario", JSON.stringify(data.usuario));
 
         // Redirigir (ajusta la URL según tu app)
         window.location.href = "/html/productos.html"; 

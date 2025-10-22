@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="/css/carrito.css">
   <link rel="stylesheet" href="/css/style-producto.css">
   <link rel="stylesheet" href="/css/form.css">
+  <link rel="stylesheet" href="/css/modal-perfil.css">
+  <script src="/js/manejo-boton.js"></script>
+  <link rel="stylesheet" href="/css/modal-stock-insuficiente.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
     <script src="/js/ver.js"></script>
 </head>
@@ -20,7 +23,10 @@
         </div>
         
         <div>
-            <button class="menu-btn" onclick="abrirLogin()" id="botoncin"><img src="/image/user-svgrepo-com.svg" alt="user" class="menu-icon"></button>
+          <button class="menu-btn" id="botoncin" onclick="manejarBotonUsuario()">
+              <img src="/image/user-svgrepo-com.svg" alt="user" class="menu-icon">
+          </button>
+
             <button class="menu-btn" onclick="abrirCarrito()"><img src="/image/cart-shopping-fast-svgrepo-com.svg" alt="carrito" class="menu-icon"></button>
         </div>
     </header>
@@ -51,8 +57,8 @@
         <img src="/image/logo-final-negro.png" alt="Logo" class="sidebar-logo">
     </div>
 
-    <a href="#"><img src="/image/shop-svgrepo-com.svg" alt="Tienda" class="icon"> Tienda</a>
-    <a href="#"><img src="/image/factura.svg" alt="Factura" class="icon"> Factura Electrónica</a>
+    <a href="/index.html"><img src="/image/home-svgrepo-com.svg" alt="Index" class="icon"> Inicio</a>
+    <a href="/html/Factura Electronica.html"><img src="/image/factura.svg" alt="Factura" class="icon"> Factura Electrónica</a>
     <a href="#"><img src="/image/contacto.svg" alt="Contáctanos" class="icon"> Contáctanos</a>
     <a href="#"><img src="/image/about-svgrepo-com.svg" alt="Quiénes somos" class="icon"> Quiénes somos</a>
     <a href="#"><img src="/image/policy-svgrepo-com.svg" alt="Políticas" class="icon"> Políticas</a>
@@ -140,6 +146,20 @@
   <div class="categories">
     <h3>Productos</h3>
     <ul class="cat-list">
+
+      <li class="cat-item" data-cat="Todo">
+        <div class="cat-header">
+          <img class="icon-l" src="/image/bag-svgrepo-com.svg" alt="">Todo
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="2" y="2" width="5" height="5"/>
+  <rect x="9" y="2" width="5" height="5"/>
+  <rect x="2" y="9" width="5" height="5"/>
+  <rect x="9" y="9" width="5" height="5"/>
+</svg>
+
+        </div>
+      </li>
+
 
       <!-- POSTRES -->
       <li class="cat-item" data-cat="Postres">
@@ -305,6 +325,8 @@
     <script src="js/carrousel.js"></script>
     <script src="js/carrito.js"></script>
     <script src="/js/form.js"></script>
+    <script src="/js/obtener-login.js"></script>
+    <script src="/js/obtener-registro.js"></script>
 </footer>
 
 <script>
@@ -328,5 +350,72 @@
 <script src="/js/nav.js"></script>
 <script src="/js/carrito.js"></script>
 
+<!-- 🔹 Modal personalizado -->
+<div id="modalStock" class="modal-stock">
+  <div class="modal-content-stock">
+    <h2>⚠️ Stock insuficiente</h2>
+    <p>No hay más unidades disponibles de este producto.</p>
+    <button id="cerrarModal">Entendido</button>
+  </div>
+</div>
+
+<div id="modalPerfil" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModalPerfil()">&times;</span>
+
+    <div class="perfil-info">
+      <img src="/image/user-svgrepo-com.svg" alt="Usuario">
+      <h2>Perfil de Usuario</h2>
+      <p>Actualiza tus datos personales o confirma tu correo electrónico.</p>
+
+      <button class="btn-cerrar-sesion" onclick="cerrarSesion()">
+            <img src="/image/keyboard-backspace-svgrepo-com.svg" alt="Salir">
+            Cerrar sesión
+        </button>
+    </div>
+
+    <form id="formPerfil">
+      <label>Correo (no editable)</label>
+      <input type="email" id="correo" disabled>
+      <small id="estadoCorreo" style="color:gray;">No confirmado</small>
+
+
+      <button type="button" id="btnConfirmCorreo">Confirmar correo en Gmail</button>
+
+      <label>Contraseña</label>
+      <input type="password" id="contrasena" placeholder="********">
+
+      <label>Nombre</label>
+      <input type="text" id="nombre">
+
+      <label>Apellido</label>
+      <input type="text" id="apellido">
+
+      <label>Documento</label>
+      <input type="text" id="documento">
+
+      <label for="tipoDocumento">Tipo de documento</label>
+        <select id="tipoDocumento" required>
+            <option value="" disabled selected>Seleccione...</option>
+            <option value="CC">Cédula de Ciudadanía (C.C.)</option>
+            <option value="TI">Tarjeta de Identidad (T.I.)</option>
+            <option value="CE">Cédula de Extranjería (C.E.)</option>
+            <option value="PA">Pasaporte</option>
+            <option value="PEP">Permiso Especial de Permanencia (PEP)</option>
+        </select>
+
+
+      <label>Dirección</label>
+      <input type="text" id="direccion" placeholder="Ejemplo: Calle 10 #25-36, Cartago, Valle del cauca">
+
+      <label>Celular</label>
+      <input type="text" id="celular">
+
+      <button type="submit">Guardar cambios</button>
+    </form>
+  </div>
+</div>
+<script src="/js/enviar-confirmacion.js"></script>
+<script src="/js/sesion.js"></script>
 </body>
 </html>

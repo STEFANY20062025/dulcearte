@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style-politicas.css">
+    <link rel="stylesheet" href="/css/carrito.css">
+    <link rel="stylesheet" href="/css/modal-perfil.css">
+    <title>Politicas-DulceArte</title>
+    <link rel="icon" href="/image/Bendito (2)-Recuperado.png">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <button class="menu-btn" onclick="abrirMenu()">
+      <img src="/image/menu-svgrepo-com.svg" alt="menu" class="menu-icon">
+    </button>
+
+    <div class="logo">
+      <img src="/image/Bendito (2)-Recuperado.png" alt="logo" class="header-logo">
+    </div>
+    
+    <div>
+      <button class="menu-btn" onclick="abrirLogin()" id="botoncin">
+        <img src="/image/user-svgrepo-com.svg" alt="user" class="menu-icon">
+      </button>
+      <button class="menu-btn" onclick="abrirCarrito()">
+        <img src="/image/cart-shopping-fast-svgrepo-com.svg" alt="carrito" class="menu-icon">
+      </button>
+    </div>
+  </header>
+
+  <!-- CARRITO -->
+  <div class="carrito-sidebar" id="carritoSidebar">
+    <button class="cerrar-carrito" onclick="cerrarCarrito()">
+      <img src="/image/close-ellipse-svgrepo-com.svg" alt="Cerrar">
+    </button>
+
+    <h3>Tu Carrito</h3>
+    <div id="carrito-items"></div>
+
+    <div class="carrito-footer">
+      <div class="carrito-total">
+        Total: <span id="carrito-total">$0</span>
+      </div>
+      <button class="finalizar-compra">Finalizar compra</button>
+    </div>
+  </div>
+
+  <div class="overlay" id="carritoOverlay" onclick="cerrarCarrito()"></div>
+
+  <!-- MENÚ LATERAL -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2>DulceArte</h2>
+      <img src="/image/logo-final-negro.png" alt="Logo" class="sidebar-logo">
+    </div>
+    <a href="#"><img src="/image/shop-svgrepo-com.svg" alt="Tienda" class="icon"> Tienda</a>
+    <a href="#"><img src="/image/factura.svg" alt="Factura" class="icon"> Factura Electrónica</a>
+    <a href="#"><img src="/image/contacto.svg" alt="Contáctanos" class="icon"> Contáctanos</a>
+    <a href="#"><img src="/image/about-svgrepo-com.svg" alt="Quiénes somos" class="icon"> Quiénes somos</a>
+    <a href="#"><img src="/image/policy-svgrepo-com.svg" alt="Políticas" class="icon"> Políticas</a>
+    <a href="#"><img src="/image/blog-svgrepo-com.svg" alt="Blogs" class="icon"> Blogs</a>
+    <a href="#"><img src="/image/work-svgrepo-com.svg" alt="Trabaja con nosotros" class="icon"> Trabaja con nosotros</a>
+    
+    <br>
+    <h2>Encuéntranos en:</h2>
+    <div class="social-icons-sidebar">
+      <a href="#"><img src="/image/facebook-svgrepo-com.svg" alt="Facebook"></a>
+      <a href="#"><img src="/image/instagram-svgrepo-com.svg" alt="Instagram"></a>
+      <a href="#"><img src="/image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay" onclick="cerrarMenu()"></div>
+
+<main>
+    <div class="Block-terms">
+        <h2>TÉRMINOS Y CONDICIONES DE USO DE LA PÁGINA WEB</h2>
+        <p>
+        Última actualización: 2/10/2025
+
+        Bienvenido a la página web de Dulce Arte, un emprendimiento dedicado a la venta y entrega de postres en Cartago. Al acceder y navegar por nuestro sitio web, aceptas los siguientes Términos y Condiciones. Te recomendamos leerlos cuidadosamente antes de realizar cualquier compra o registrarte en nuestra plataforma.</p>
+        <details>
+        <summary>
+            1. Objetivo
+            <img src="/image/arrow.svg" alt="">
+        </summary>
+        <p>
+        Estos Términos regulan el acceso, navegación y uso de la página web de Dulce Arte, así como la compra de productos a través de la misma.
+        </p>
+        </details>
+        <details>
+        <summary>
+            2. Politicas del sitio web
+            <img src="/image/arrow.svg" alt="">
+        </summary>
+            <li>El usuario se compromete a utilizar la página de forma lícita y respetuosa.</li>
+            <li>Está prohibido el uso del sitio con fines fraudulentos, ilegales o que perjudiquen a terceros.</li>
+            <li>El contenido (textos, imágenes, logotipos, recetas y diseños) pertenece a Dulce Arte y no puede ser reproducido sin autorización.</li>
+        </details>
+        <details>
+        <summary>
+            3. Politicas de usuario 
+            <img src="/image/arrow.svg" alt="">
+        </summary>
+            <li>Para realizar pedidos en línea, es necesario registrarse con datos completos, verídicos y actualizados.</li>
+            <li>El usuario es responsable de la confidencialidad de su cuenta y contraseña.</li>
+            <li>Cualquier acción realizada desde la cuenta registrada se considerará responsabilidad del usuario.</li>
+        </details>
+        <details>
+        <summary>
+            4. Politicas de los productos
+            <img src="/image/arrow.svg" alt="">
+        </summary>
+            <li>Los postres ofrecidos están descritos con información de ingredientes, tamaños y precios.</li>
+            <li>Las imágenes son ilustrativas y pueden presentar variaciones respecto al producto final.</li>
+            <li>Algunos productos pueden contener alérgenos (lácteos, frutos secos, gluten, etc.), los cuales estarán especificados en la descripción.</li>
+        </details>
+        <details>
+        <summary>
+            5. Politicas de pagos 
+            <img src="/image/arrow.svg" alt="">
+        </summary>
+            <li>Los pedidos se realizan a través de la página web siguiendo el proceso de compra indicado.</li>
+            <li>Los precios incluyen impuestos aplicables, salvo que se indique lo contrario.</li>
+            <li>Los métodos de pago aceptados son pse y sus derivados .</li> 
+            <li>Una vez realizado el pedido, el usuario recibirá confirmación vía correo electrónico o mensaje en la plataforma.</li>
+        </details>
+        <details>
+        <summary>
+            6. Poloticas de entregas
+            <img src="/image/arrow.svg" alt="">
+        </summary>
+            <li>Los pedidos se entregan en la ciudad de Cartago y zonas cercanas, según cobertura disponible.</li>
+            <li>Los tiempos de entrega son aproximados y pueden variar por tráfico, condiciones climáticas o disponibilidad de productos.</li>
+            <li>El cliente debe proporcionar una dirección correcta y estar disponible en el momento de la entrega.</li>
+        </details>
+        <details>
+        <summary>
+            7. Politicas de canselacion o devoluciones
+            <img src="/image/arrow.svg" alt="">
+        </summary>
+            <li>Los pedidos podrán cancelarse solo dentro de los <!--Preguntar a miguel--> posteriores a la confirmación.</li>
+            <li>Por tratarse de productos alimenticios, no se aceptan devoluciones una vez entregados.</li>
+            <li>Si el pedido llega en condiciones inadecuadas o no corresponde a lo solicitado, el cliente deberá reportarlo en un plazo máximo de <!--Preguntar a miguel--> para evaluar reposición o reembolso.</li>
+        </details>
+        <details>
+        <summary>
+            8. Politicas de responsabilidad
+            <img src="/image/arrow.svg" alt="">
+        </summary>
+        <p>
+        El usuario se compromete a:
+        </p>
+            <li>No realizar pedidos falsos o fraudulentos.</li>
+            <li>No utilizar el sitio web para actividades ilícitas.</li>
+            <li>No revender productos adquiridos sin autorización expresa de Dulce Arte.</li>
+        </details>
+        <details>
+        <summary>
+            9. Politicas de limitación de responsabilidad
+            <img src="/image/arrow.svg" alt="">
+        </summary>
+            <li>Dulce Arte no se hace responsable por retrasos ocasionados por causas externas (clima, tráfico, fallas de transporte o plataformas de pago).</li>
+            <li>Tampoco se hace responsable por el mal uso de los productos tras la entrega.</li>
+        </details>
+        <details>
+        <summary>
+            10. Politicas de privasidad 
+            <img src="/image/arrow.svg" alt="">
+        </summary>
+        <p>
+            <li>Los datos personales proporcionados serán tratados conforme a nuestra Política de Privacidad, cumpliendo con las normas legales aplicables.</li>
+            <li>No compartiremos información personal con terceros sin consentimiento previo, salvo en casos exigidos por la ley.</li>
+        </p>
+        </details>
+        <details>
+        <summary>
+            11. Politicas de notificaciones
+            <img src="/image/arrow.svg" alt="">
+        </summary>
+        <p>
+            Dulce Arte podrá modificar en cualquier momento estos Términos y Condiciones. Las nodificaciones serán publicadas en la página web y entrarán en vigencia desde su publicación.
+        </p>
+        </details>
+        <details>
+        <summary>
+            12. Politicas de legislación aplicable
+            <img src="/image/arrow.svg" alt="">
+        </summary>
+        <p>
+            Estos Términos y Condiciones se rigen por las leyes de Colombia. Cualquier controversia será resuelta ante los tribunales competentes de Cartago.
+        </p>
+        </details>
+        <div class="block-asept">
+            <label for="">Asepto los terminos y condiciones</label>
+                <input type="checkbox" required>
+        </div>
+    </div>
+</main>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-section">
+      <h3>Enlaces de interés</h3>
+      <ul>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Política de tratamiento de datos</a></li>
+        <li><a href="#">Ventas corporativas</a></li>
+        <li><a href="#">Facturación electrónica</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Nosotros</h3>
+      <ul>
+        <li><a href="#">Acerca de Venecia</a></li>
+        <li><a href="#">Trabaja con nosotros</a></li>
+        <li><a href="#">Blogs</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Atención al cliente</h3>
+      <ul>
+        <li><a href="#">Contáctanos</a></li>
+        <li>info@nosequenombreponerle.com</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Encuéntranos en:</h3>
+      <div class="social-icons">
+        <a href="#"><img src="/image/facebook-svgrepo-com.svg" alt="Facebook"></a>
+        <a href="#"><img src="/image/instagram-svgrepo-com.svg" alt="Instagram"></a>
+        <a href="#"><img src="/image/tiktok-icon-white-1-logo-svgrepo-com.svg" alt="TikTok"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="/js/carrito.js"></script>
+  <script src="/js/ver.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/form.js"></script>
+
+<div id="modalPerfil" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModalPerfil()">&times;</span>
+
+    <div class="perfil-info">
+      <img src="/image/user-svgrepo-com.svg" alt="Usuario">
+      <h2>Perfil de Usuario</h2>
+      <p>Actualiza tus datos personales o confirma tu correo electrónico.</p>
+
+      <button class="btn-cerrar-sesion" onclick="cerrarSesion()">
+            <img src="/image/keyboard-backspace-svgrepo-com.svg" alt="Salir">
+            Cerrar sesión
+        </button>
+    </div>
+
+    <form id="formPerfil">
+      <label>Correo (no editable)</label>
+      <input type="email" id="correo" disabled>
+      <small id="estadoCorreo" style="color:gray;">No confirmado</small>
+
+
+      <button type="button" id="btnConfirmCorreo">Confirmar correo en Gmail</button>
+
+      <label>Contraseña</label>
+      <input type="password" id="contrasena" placeholder="********">
+
+      <label>Nombre</label>
+      <input type="text" id="nombre">
+
+      <label>Apellido</label>
+      <input type="text" id="apellido">
+
+      <label>Documento</label>
+      <input type="text" id="documento">
+
+      <label for="tipoDocumento">Tipo de documento</label>
+        <select id="tipoDocumento" required>
+            <option value="" disabled selected>Seleccione...</option>
+            <option value="CC">Cédula de Ciudadanía (C.C.)</option>
+            <option value="TI">Tarjeta de Identidad (T.I.)</option>
+            <option value="CE">Cédula de Extranjería (C.E.)</option>
+            <option value="PA">Pasaporte</option>
+            <option value="PEP">Permiso Especial de Permanencia (PEP)</option>
+        </select>
+
+
+      <label>Dirección</label>
+      <input type="text" id="direccion" placeholder="Ejemplo: Calle 10 #25-36, Cartago, Valle del cauca">
+
+      <label>Celular</label>
+      <input type="text" id="celular">
+
+      <button type="submit">Guardar cambios</button>
+    </form>
+  </div>
+</div>
+
+<script src="/js/enviar-confirmacion.js"></script>
+<script src="/js/sesion.js"></script>
+</body>
+</html>
